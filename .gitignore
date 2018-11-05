@@ -1,0 +1,6 @@
+*~
+.DS_Store
+venv/
+.cache/
+.pytest_cache/
+.idea/
