@@ -4,6 +4,7 @@ venv/
 .cache/
 .pytest_cache/
 .idea/
+*/__pycache/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

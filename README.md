@@ -34,10 +34,17 @@ Vessel comes with a small CLI tool to help generate commmonly used utilities lik
 	make:repo name eg. python vessel.py make:repo user
 	make:blueprint name eg. python vessel.py make:blueprint vendors [--url_prefix=vendors]
 	make:controller name eg. python vessel.py make:controller user
-	make:test name eg python vessel.py make:test test_meal_repo - This command will parse paths and write to the valid paths provided
+	make:test name eg python vessel.py make:test test_user_repo - This command will parse paths and write to the valid paths provided
 	make:factory name eg python vessel.py make:factory role
     show_routes eg python vessel.py show_routes
  ```
+
+## Tests
+Ofcourse there's support for testing using pytest. To create a new test suite, simply run the make:test command on the CLI. 
+
+eg. `$ python vessel.py make:test integration/endpoints/test_user_endpoints`
+
+To run tests `$ python -m pytest`
 
 ## Folder and Code Structure
 ```
