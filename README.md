@@ -19,6 +19,8 @@ In the `project_root` with environment activated,
 
 Run: `$ python run.py runserver`
 
+Open your browser and enter `http://127.0.0.1:5000/api/v1/`
+
 ## vessel CLI Tool
 Vessel comes with a small CLI tool to help generate commmonly used utilities like `models`, `repositories`, `blueprints`,
  `controllers`, `tests` and `factories`
@@ -85,3 +87,9 @@ Vessel comes with a small CLI tool to help generate commmonly used utilities lik
     |-- run.py
     |-- vessel.py
 ```
+## Procfile
+For Heroku enthusiast. Delete if you'd not be deploying to Heroku.
+
+## Bugs, Corrections, Feedback, Contributing
+No system is 100% I'd be happy if you can jump in and collaborate. If you find bugs or errors or see places where you can improve on,
+fork the repo, and raise a PR or shoot me an email. jcobhams[at]gmail[dot]com
