@@ -14,13 +14,17 @@ class Auth:
 	
 	''' Routes The Authentication Header Should Not Be Applied To'''
 	authentication_header_ignore = [
+		'/',
 		'/docs'
 	]
 	
 	@staticmethod
 	def check_token():
 		if request.method != 'OPTIONS':
-
+			
+			# if '/' in Auth.authentication_header_ignore:
+			# 	return None
+			#
 			for endpoint in Auth.authentication_header_ignore:
 				if request.path.find(endpoint) > -1: # If endpoint in request.path, ignore this check
 					return None
@@ -28,6 +32,7 @@ class Auth:
 			try:
 				token = Auth.get_token()
 			except Exception as e:
+				print(e)
 				return make_response(jsonify({'msg': str(e)}),400)
 
 			try:
