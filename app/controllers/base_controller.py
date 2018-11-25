@@ -1,6 +1,7 @@
 from app.utils.auth import Auth
 from flask import jsonify, make_response
 
+
 class BaseController:
 	
 	def __init__(self, request):
@@ -24,7 +25,6 @@ class BaseController:
 		for key in keys:
 			values.append(self.request.args.get(key))
 		return values
-		
 	
 	def get_json(self):
 		return self.request.get_json()
@@ -48,11 +48,3 @@ class BaseController:
 	
 	def missing_response(self, msg='Missing Required Parameters'):
 		return self.handle_response(msg=msg, status_code=400)
-	
-	def pagination_meta(self, paginator):
-		return {'total_rows': paginator.total, 'total_pages': paginator.pages, 'current_page': paginator.page,
-				'next_page': paginator.next_num, 'prev_page': paginator.prev_num}
-	
-	def prettify_response_dates(self, created_at, updated_at=None):
-		return {'created_at': created_at, 'updated_at': updated_at,
-				'date_pretty_short': created_at.strftime('%b %d, %Y'), 'date_pretty': created_at.strftime('%B %d, %Y')}
